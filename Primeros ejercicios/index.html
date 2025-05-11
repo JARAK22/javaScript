@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="estilos/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Proyecto</title>
+  </head>
+  <body>
+    <h1>Ejercicios con JavaScript</h1>
+    <h2>Primer ejercicio (producto y su iva).</h2>
+
+    <input type="number" id="precio" placeholder="Precio producto" />
+    <br />
+    <input type="number" id="iva" placeholder="IVA" />
+    <br />
+    <p id="totalPre"></p>
+    <button onclick="calPrecioTotal()">Enviar</button>
+
+    <h2>Segundo ejercicio (perímetro del cuadrado y area).</h2>
+    
+    <input type="number" id="LCuadrado" placeholder="Lado del cuadrado" />
+    <br />
+    
+    <p id="pCuadrado"></p>
+    <p id="aCuadrado"></p>
+    <button onclick="perimetoCuadrado()">Enviar</button>
+    
+    <h2>Tercer ejercicio (Nombre usuario).</h2>
+    <input type="text" id="usurio" placeholder="Ingresa tu nombre" />
+    <br />
+    
+    <p id="textNombre"></p>
+    <button onclick="nombreUsuario()">Enviar</button>
+    
+    <h2>Cuarto ejercicio (Numero del medio).</h2>
+    <input type="text" id="numero1" placeholder="Ingresa el primer valor" />
+    <input type="text" id="numero2" placeholder="Ingresa el segundo valor" />
+    <input type="text" id="numero3" placeholder="Ingresa el tercer valor" />
+    <br />
+    
+    <p id="numeroMedio"></p>
+    <button onclick="valorMedio()">Enviar</button>
+    <br />
+    
+    <h2>Quinto ejercicio (Consumo de gasolina).</h2>
+    <input type="text" id="km" placeholder="Kilometros recorridos" />
+    <input type="text" id="litros" placeholder="Conbustible consumido" />
+    <br />
+    
+    <p id="consumido"></p>
+    <button onclick="consumoCombustible()">Enviar</button>
+    <br />
+    
+    <h2>Sexto ejercicio (Horas y minutos a segundos).</h2>
+    <input type="text" id="seconsH" placeholder="Horas" />
+    <input type="text" id="seconsM" placeholder="Minutos" />
+    <br />
+    
+    <p id="sHoras"></p>
+    <p id="sMinutos"></p>
+    <button onclick="convertirHM()">Enviar</button>
+    <br />
+    
+    <h2>Septimo ejercicio (Decenas y unidades).</h2>
+    <input type="text" id="numero" placeholder="numero de dos digitos"/>
+    <br />
+    
+    <p id="decenas"></p>
+    <p id="unidades"></p>
+    <button onclick="decenasUnidades()">Enviar</button>
+    <br />
+    
+    <h2>Octavo ejercicio (Torta de papa).</h2>
+    <input type="number" id="personas" placeholder="Cantidad de personas"/>
+    <br />
+    
+    <p id="tortaPapa"></p>
+    <button onclick="cantidadIgredientes()">Enviar</button>
+    <br />
+    
+    <h2>Noveno ejercicio (Cambio variable).</h2>
+    <input type="number" id="valor1" placeholder="varible 1"/>
+    <input type="number" id="valor2" placeholder="varible 2"/>
+    <br />
+    
+    <button onclick="cambioVariable()">Enviar</button>
+    <br />
+    
+    <h2>Decimo ejercicio (par o impar).</h2>
+    <input type="number" id="parImpar" placeholder="Ingrese un numero"/>
+    <br />
+    
+    <p id="resultadoParImpar"></p>
+    <button onclick="parImpar()">Enviar</button>
+
+    <script src="js/logica.js"></script>
+  </body>
+</html>

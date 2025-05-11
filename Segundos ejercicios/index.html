@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios de JavaScript</title>
+  <link rel="stylesheet" type="text/css" href="estilos/styles.css">
+</head>
+<body>
+  <h1>Ejercicios JS</h1>
+
+  <!-- 1. Par o impar -->
+  <h3>1. ¿Par o impar?</h3>
+  <input type="number" id="numParImpar" placeholder="Ingresa un número">
+  <button onclick="parImpar()">Verificar</button>
+  <p id="resParImpar"></p>
+
+  <!-- 2. Puede votar -->
+  <h3>2. ¿Puede votar?</h3>
+  Edad: <input type="number" id="edadVotar"><br><br>
+
+  ¿Tiene cédula?
+  <select id="tieneCedula">
+    <option value="si">Sí</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+  ¿Está inscrita la cédula?
+  <select id="cedulaInscrita">
+    <option value="si">Sí</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+  <button onclick="verificarVotacion()">Verificar</button>
+  <p id="resVotar"></p>
+
+  <!-- 3. Día de la semana -->
+  <h3>3. Día de la semana</h3>
+  <input type="number" id="diaSemana" placeholder="1-7">
+  <button onclick="diaSemana()">Mostrar</button>
+  <p id="resDia"></p>
+
+  <!-- 4. Precio entrada -->
+  <h3>4. Precio de entrada</h3>
+  <input type="number" id="edadEntrada" placeholder="Edad">
+  <button onclick="entradas()">Calcular</button>
+  <p id="resEntrada"></p>
+
+  <!-- 5. Impuesto según salario -->
+  <h3>5. Impuesto salario</h3>
+  <input type="number" id="salario" placeholder="Salario">
+  <button onclick="impuestoSalario()">Calcular</button>
+  <p id="resImpuesto"></p>
+
+  <!-- 6. Múltiplos de 3 -->
+  <h3>6. Múltiplos de 3 entre dos números</h3>
+  De: <input type="number" id="multi3a"> a <input type="number" id="multi3b">
+  <button onclick="multiplosDeTres()">Ver</button>
+  <p id="resMulti3"></p>
+
+  <!-- 7. Número primo -->
+  <h3>7. ¿Es primo?</h3>
+  <input type="number" id="numPrimo">
+  <button onclick="primo()">Verificar</button>
+  <p id="resPrimo"></p>
+
+  <!-- 8. Tabla de multiplicar del 5 al 9 -->
+  <h3>8. Tabla del 5 al 9</h3>
+  <button onclick="tablaMultiplicar()">Mostrar en consola</button>
+  <p id="resTablaMultiplicar"></p>
+
+  <!-- 9. Repetir texto -->
+  <h3>9. Repetir texto</h3>
+  Veces: <input type="number" id="numRepeat"> Texto: <input type="text" id="textoRepeat">
+  <button onclick="numEntreUnoVeinte()">Mostrar en consola</button>
+   <p id="resNumEntreUnoVeinte"></p>
+
+  <!-- 10. Factorial -->
+  <h3>10. Factorial</h3>
+  <input type="number" id="numFactorial">
+  <button onclick="factorialHandler()">Calcular</button>
+  <p id="resFactorial"></p>
+
+  <!-- 11. Pares e impares -->
+  <h3>11. Suma pares y promedio impares</h3>
+  De: <input type="number" id="parImp1"> a <input type="number" id="parImp2">
+  <button onclick="paresPromedioImpares()">Calcular en consola</button>
+  <p id="resParesImpares"></p>
+
+  <!-- 12. Hash (#) -->
+  <h3>12. Pirámide de #</h3>
+  <input type="number" id="numHash" placeholder="Líneas">
+  <button onclick="hashFunction()">Mostrar en consola</button>
+  <p id="resHash"></p>
+
+  <script type="text/javascript" src="js/logica.js"></script>
+</body>
+</html>
