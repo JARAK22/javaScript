@@ -7,16 +7,16 @@ let continuar = true;
 
 while (continuar) {
     console.log("========================")
-    console.log(`=== MENÃš BANCO ADSO ===`);
+    console.log(`=== BANCO ADSO ===`);
     console.log(`1. Crear Cuenta`)
     console.log(`2. Consignar Cuenta`)
     console.log(`3. Retirar Cuenta`)
-    console.log(`4. Consultar Cuenta por CÃ³digo`)
+    console.log(`4. Consultar Cuenta por Codigo`)
     console.log(`6. Listar Cuentas`)
     console.log(`7. Salir`)
     console.log("========================")
 
-    let opcion = prompt("OpciÃ³n: ");
+    let opcion = prompt("Opcion: ");
 
     switch (opcion) {
         case "1":
@@ -38,14 +38,14 @@ while (continuar) {
             continuar = false;
             break;
         default:
-            console.log("OpciÃ³n no vÃ¡lida");
+            console.log("Opcion no valida");
             break;
     }
 }
 
 function crearCuenta() {
     let nombre = prompt("Nombre: ");
-    let codigo = prompt("CÃ³digo: ");
+    let codigo = prompt("Codigo: ");
     let saldo = parseInt(prompt("Saldo: "));
 
     cuentas.push({
@@ -54,15 +54,15 @@ function crearCuenta() {
         saldo: saldo
     });
     console.log("========================")
-    console.log("Cuenta creada con Ã©xito");
+    console.log("Cuenta creada con Exito");
     console.log(`Nombre: ${nombre}`);
-    console.log(`CÃ³digo: ${codigo}`);
+    console.log(`Codigo: ${codigo}`);
     console.log(`Saldo: ${saldo}`);
     console.log("========================")
 }
 
 function consignarCuenta() {
-    let codigo = prompt("CÃ³digo de la cuenta a consignar: ");
+    let codigo = prompt("Codigo de la cuenta a consignar: ");
     let cantidad = parseInt(prompt("Cantidad a consignar: "));
 
     let cuenta = buscarCuentaPorCodigo(codigo);
@@ -71,9 +71,9 @@ function consignarCuenta() {
         cuenta.saldo += cantidad;
 
         console.log("========================")
-        console.log("Cuenta consignada con Ã©xito");
+        console.log("Cuenta consignada con exito");
         console.log(`Nombre: ${cuenta.nombre}`);
-        console.log(`CÃ³digo: ${cuenta.codigo}`);
+        console.log(`Codigo: ${cuenta.codigo}`);
         console.log(`Saldo: ${cuenta.saldo}`);
         console.log("========================")
     } else {
@@ -82,7 +82,7 @@ function consignarCuenta() {
 }
 
 function retirarCuenta() {
-    let codigo = prompt("CÃ³digo de la cuenta a retirar: ");
+    let codigo = prompt("Codigo de la cuenta a retirar: ");
     let cantidad = parseInt(prompt("Cantidad a retirar: "));
 
     let cuenta = buscarCuentaPorCodigo(codigo);
@@ -91,9 +91,9 @@ function retirarCuenta() {
         cuenta.saldo -= cantidad;
 
         console.log("========================")
-        console.log("Cuenta retirada con Ã©xito");
+        console.log("Cuenta retirada con exito");
         console.log(`Nombre: ${cuenta.nombre}`);
-        console.log(`CÃ³digo: ${cuenta.codigo}`);
+        console.log(`Codigo: ${cuenta.codigo}`);
         console.log(`Saldo: ${cuenta.saldo}`);
         console.log("========================")
     } else {
@@ -102,15 +102,15 @@ function retirarCuenta() {
 }
 
 function consultarCuentaPorCodigo() {
-    let codigo = prompt("CÃ³digo de la cuenta a consultar: ");
+    let codigo = prompt("Codigo de la cuenta a consultar: ");
 
     let cuenta = buscarCuentaPorCodigo(codigo);
 
     if (cuenta) {
         console.log("========================")
-        console.log("Cuenta consultada con Ã©xito");
+        console.log("Cuenta consultada con exito");
         console.log(`Nombre: ${cuenta.nombre}`);
-        console.log(`CÃ³digo: ${cuenta.codigo}`);
+        console.log(`Codigo: ${cuenta.codigo}`);
         console.log(`Saldo: ${cuenta.saldo}`);
         console.log("========================")
     } else {
@@ -124,7 +124,7 @@ function listarCuentas() {
 
     cuentas.forEach(cuenta => {
         console.log(`Nombre: ${cuenta.nombre}`)
-        console.log(`CÃ³digo: ${cuenta.codigo}`)
+        console.log(`Codigo: ${cuenta.codigo}`)
         console.log(`Saldo: ${cuenta.saldo}`)
     });
     console.log("========================")

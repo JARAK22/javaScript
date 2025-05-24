@@ -1,3 +1,39 @@
+const prompt = require('prompt-sync')(); // Para leer datos en consola (Node.js)
+
+// Ingreso de numeros
+function ingresarNumerosArr() {
+    let numeros = [];
+    while (true) {
+        console.log("ingresa la opcion S para ingresar otro numero o N para salir")
+        let opcion = prompt("Opcion: ");
+        if (opcion.toLowerCase() === "s"){
+            console.log("Ingresa un numero");
+            let numero = parseInt(prompt("Numero: "));
+            numeros.push(numero);
+        } else {
+            break;
+        }
+    }
+    return numeros
+}
+
+// Ingreso de palabras
+function ingresarPalabrasArr() {
+    let palabras = [];
+    while (true) {
+        console.log("ingresa la opcion S para ingresar otra palabra o N para salir")
+        let opcion = prompt("Opcion: ");
+        if (opcion.toLowerCase() === "s"){
+            console.log("Ingresa una palabra");
+            let palabra = prompt("Palabra: ");
+            palabras.push(palabra);
+        } else {
+            break;
+        }
+    }
+    return palabras
+}
+
 // Primer ejercicio
 function mejorValor(min, max) {
     let zMejor = 0, xMayor = 0, yMayor = 0
@@ -11,9 +47,12 @@ function mejorValor(min, max) {
             yMayor = y
         }
     }
-    return (`Z = XÂ² + YÂ² = ${zMejor} = ${xMayor}Â² + ${yMayor}Â²`)
+    return (`Z = X² + Y² = ${zMejor} = ${xMayor}² + ${yMayor}²`)
 }
+console.log("================")
+console.log("Mejor Valor de Z")
 console.log(mejorValor(-5, 5))
+console.log("================\n")
 
 // Segundo ejercicio
 function generadorContrasena() {
@@ -31,13 +70,20 @@ function generadorContrasena() {
     return password
     
 }
+console.log("========================")
+console.log("Generador de contraseñas")
 console.log(generadorContrasena())
+console.log("========================\n")
 
 // Tercer ejercicio
 function areaCirculo(r) {
     return (Math.PI * Math.pow(r, 2)).toFixed(2)
 }
-console.log(areaCirculo(2))
+console.log("=======================================")
+console.log("Area de un circulo")
+let radio = prompt("Ingresa el radio de un circulo: ")
+console.log(areaCirculo(radio))
+console.log("=======================================\n")
 
 // Cuarto ejercicio
 function cantidadVocales(str) {
@@ -54,7 +100,11 @@ function cantidadVocales(str) {
     
     return vocalesEncontradas
 }
-console.log(cantidadVocales("Jaider"))
+console.log("===================")
+console.log("Cantidad de vocales")
+let palabra = prompt("Ingresa una palabra: ")
+console.log(cantidadVocales(palabra))
+console.log("===================\n")
 
 // Quinto ejercicio
 function numerosPares(arr) {
@@ -68,7 +118,10 @@ function numerosPares(arr) {
     
     return `hay ${numerosParesCant} numeros pares`
 }
-console.log(numerosPares([2,3,6,8,9,10,23]))
+console.log("============================")
+console.log("Numerors pares de un arreglo")
+console.log(numerosPares(ingresarNumerosArr()))
+console.log("============================\n")
 
 // Sexto ejercicio
 function sumaArreglo(arr) {
@@ -80,10 +133,13 @@ function sumaArreglo(arr) {
     
     return sumaValores
 }
-console.log(sumaArreglo([2,3,6,8,9,10,23]))
+console.log("=============================")
+console.log("Suma de valores de un arreglo")
+console.log(sumaArreglo(ingresarNumerosArr()))
+console.log("=============================\n")
 
 // Septimo ejercicio
-function sumaArreglo(arr) {
+function mayorValor(arr) {
     let mayor = -Infinity
 
     for (let i = 0; i < arr.length; i ++){
@@ -94,7 +150,10 @@ function sumaArreglo(arr) {
     
     return mayor
 }
-console.log(sumaArreglo([2,3,6,8,9,10,23]))
+console.log("=========================")
+console.log("Mayor valor de un arreglo")
+console.log(mayorValor(ingresarNumerosArr()))
+console.log("=========================\n")
 
 // Octavo ejercicio
 function cantidadPalabras(str) {
@@ -108,7 +167,11 @@ function cantidadPalabras(str) {
     
     return palabras
 }
-console.log(cantidadPalabras("Jaider Andres Cifuentes hola mundo"))
+console.log("=================")
+console.log("Cantidad palabras")
+let palabras = prompt("Ingresa una cadena de palabras: ")
+console.log(cantidadPalabras(palabras))
+console.log("=================\n")
 
 // Noveno ejercicio
 function invertidoArr(arr) {
@@ -119,7 +182,10 @@ function invertidoArr(arr) {
     }
     return invertido
 }
-console.log(invertidoArr([1,2,3,4,5,6,7,8,9]))
+console.log("===============")
+console.log("Array invertido")
+console.log(invertidoArr(ingresarNumerosArr()))
+console.log("===============\n")
 
 // Decimo ejercicio
 function duplicados(arr) {
@@ -137,7 +203,10 @@ function duplicados(arr) {
     }
     return sinDuplicar
 }
-console.log(duplicados([1,2,2,4,5,6,1,6,9,3]))
+console.log("===================")
+console.log("Eliminar duplicados")
+console.log(duplicados(ingresarNumerosArr()))
+console.log("===================\n")
 
 // Onceavo ejercicio
 function nombresMayusculas(arr) {
@@ -147,7 +216,10 @@ function nombresMayusculas(arr) {
     }
     return arrMayuscula
 }
-console.log(nombresMayusculas(["jaider", "andres", "juan", "camilo"]))
+console.log("==================")
+console.log("Nombres mayusculas")
+console.log(nombresMayusculas(ingresarPalabrasArr()))
+console.log("==================\n")
 
 // Doceavo ejercicio
 function valorIndex(arr, valor) {
@@ -159,10 +231,13 @@ function valorIndex(arr, valor) {
     }
     return posicion
 }
-console.log(valorIndex(["jaider", "andres", "juan", "camilo"], "juan"))
+console.log("=========================")
+console.log("Valor index de un arreglo")
+console.log(valorIndex(ingresarNumerosArr(), parseInt(prompt("Ingresa el valor a buscar: "))))
+console.log("=========================")
 
 // Treceavo ejercicio
-function valorIndex(arr, valor, remplazo) {
+function remplazarValor(arr, valor, remplazo) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === valor) {
             arr[i] = remplazo
@@ -170,7 +245,10 @@ function valorIndex(arr, valor, remplazo) {
     }
     return arr
 }
-console.log(valorIndex(["jaider", "andres", "juan", "camilo"], "juan", "cifuentes"))
+console.log("==============================")
+console.log("Remplazo por valor de un array")
+console.log(remplazarValor(ingresarNumerosArr(), parseInt(prompt("Ingresa el valor a remplazar: ")), parseInt(prompt("Ingresa el valor a remplazar por: "))))
+console.log("==============================\n")
 
 // Catorceavo ejercicio
 function promedioArr(arr) {
@@ -182,11 +260,12 @@ function promedioArr(arr) {
     promedio = suma / arr.length 
     return promedio 
 }
-console.log(promedioArr([1,2,3,4,5,6,7,8,9]))
+console.log("====================")
+console.log("Promedio de un array")
+console.log(promedioArr(ingresarNumerosArr()))
+console.log("====================\n")
 
 // Quinceavo ejercicio 
-const prompt = require('prompt-sync')(); // Para leer datos en consola (Node.js)
-
 let votosTotales = 0;
 let votosUno = 0;
 let votosDos = 0;
@@ -235,10 +314,11 @@ while (votosTotales < maxVotantes) {
 
     console.log(`Votos registrados: ${votosTotales}/${maxVotantes}`);
 }
-
-console.log("\n=== RESULTADOS FINALES ===");
+console.log("==========================")
+console.log("=== RESULTADOS FINALES ===");
 console.log(`Personas que votaron: ${votosTotales}`);
 console.log(`Candidato Uno: ${votosUno} votos`);
 console.log(`Candidato Dos: ${votosDos} votos`);
 console.log(`Candidato Tres: ${votosTres} votos`);
 console.log(`Votos en Blanco: ${votosBlanco}`);
+console.log("==========================")
